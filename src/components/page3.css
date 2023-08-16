@@ -1,8 +1,8 @@
 .page3 {
-  height: 100vh;
-  scroll-snap-align: start;
+  padding: 10px;
   background-color: rgb(32, 32, 32);
   overflow: hidden;
+  text-align: center;
 }
 
 .cont {
@@ -17,6 +17,7 @@
 .h1 {
   font-size: 5rem;
   position: relative;
+  margin-bottom: 2rem;
   letter-spacing: 15px;
   text-transform: uppercase;
   /* -webkit-box-reflect: below 2px linear-gradient(transparent, #d8e9a8); */
@@ -87,4 +88,9 @@
   text-transform: uppercase;
   font-size: 2.5rem;
   color: #f7eb96;
+}
+@media screen and (max-width: 500px) {
+  .h1 {
+    font-size: 3rem;
+  }
 }

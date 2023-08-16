@@ -1,15 +1,19 @@
 .page1 {
-  height: 100vh;
-  scroll-snap-align: start;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 2rem;
 }
 
 .container {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(248, 224, 9);
+  color: rgb(219, 226, 238);
 }
 
 @keyframes sliding {
@@ -34,13 +38,6 @@
   }
 }
 
-.container img {
-  width: 25%;
-  border-radius: 20px;
-  animation: sliding 2s linear;
-  transition: all 4s;
-}
-
 .container p {
   font-weight: 700;
   font-size: 2rem;
@@ -49,27 +46,54 @@
   overflow: hidden;
 }
 .sec {
-  width: 50%;
-  height: 70%;
-  background-color: rgba(8, 47, 97, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 450px;
+  background-color: rgba(151, 153, 155, 0.205);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  text-align: center;
   border-radius: 30px;
-  box-shadow: 10px 10px 5px rgba(8, 47, 97, 0.8);
-  animation: sliding2 2s linear;
-  transition: all 2s;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  animation: sliding2 1s linear;
+  transition: all 1s;
   overflow: hidden;
+}
+
+.image-wrapper {
+  width: 200px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  margin-inline: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  animation: sliding 1s linear;
+  transition: all 1s;
+}
+
+.sec img {
+  width: 250px;
+  box-shadow: 0 0 20px rgba(228, 228, 228, 0.473);
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: top;
+  aspect-ratio: 9/16;
 }
 
 .video-container {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
   object-fit: cover;
+  inset: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .sec {
+    width: 90%;
+  }
+  .image-wrapper {
+    width: 100%;
+  }
 }

@@ -11,7 +11,10 @@ const Page1 = () => {
       <div className="container">
         <div className="sec">
           <img src={img} alt="img" />
-          <p>Happy Birthday to my Walking FM!</p>
+
+          <div>
+            <p>Happy Birthday to my Walking FM!</p>
+          </div>
         </div>
       </div>
     </div>
